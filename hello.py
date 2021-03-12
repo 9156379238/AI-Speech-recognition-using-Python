@@ -34,7 +34,7 @@ def wishMe():
     else:
         speak("Good Evening!")  
 
-    speak("I am Shubham Gandhi . Please tell me how may I help you")       
+    speak("I am Shivam. Please tell me how may I help you")       
 
 def takeCommand():
 
@@ -59,8 +59,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('shivamgandhi9156@gmail.com', 'password')
-    server.sendmail('shivamgandhi9156@gmail.com', to, content)
+    server.login('xyz@123.gmail.com', 'password')
+    server.sendmail('xyz@123.gmail.com', to, content)
     server.close()
 
 if __name__ == "__main__":
@@ -98,14 +98,14 @@ if __name__ == "__main__":
             speak(f"Sir, the time is {strTime}")
 
         elif 'open code' in query:
-            codePath = "C:\\Users\\Shubham\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+            codePath = "C:\\Users\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
 
-        elif 'email to shivam' in query:
+        elif 'email to xyz' in query:
             try:
                 speak("What should I say?")
                 content = takeCommand()
-                to = "shubhamgandhi831995@gmail.com"    
+                to = "abc@123.com"    
                 sendEmail(to, content)
                 speak("Email has been sent!")
             except Exception as e:
